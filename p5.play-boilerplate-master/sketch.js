@@ -25,8 +25,17 @@ function setup() {
   wall9 = new divide(580,550,40,5);
 
   
-  for(var i = 50;i < 550;i = i+50){
+  for(var i = 50;i < 550;i = i+40){
     stop.push(new plink(i,100));
+  }
+  for(var f = 110;f < 190;f = 20){
+    stop.push(new plink(300,f));
+  }
+  for(var  j = 80;j < 520;j = j+40){
+    stop.push(new plink(j,200));
+  }
+  for(var l = 20;l < 580;l = l+40){
+    stop.push(new plink(l,300));
   }
 
   Engine.run(engine);
@@ -55,7 +64,7 @@ function draw() {
     go[j].make();
   }
   
-  for(var i = 50;i < stop.length;i++){
+  for(var i = 0;i < stop.length;i++){
     stop[i].sell();
   }
 
